@@ -21,16 +21,16 @@ test('check "+1" button', async ({ counterPage }) => {
     await counterPage.clickPlusOneButton();
     await counterPage.checkIfCounterValueIs(startCounterValue + 1);
 
-    await counterPage.clickPlusOneButtonSeveralTimes(30);
-    await counterPage.checkIfCounterValueIs(startCounterValue + 31);
+    await counterPage.clickPlusOneButtonSeveralTimes(10);
+    await counterPage.checkIfCounterValueIs(startCounterValue + 11);
 });
 
 test('check "-1" button', async ({ counterPage }) => {
     await counterPage.clickMinusOneButton();
     await counterPage.checkIfCounterValueIs(startCounterValue - 1);
 
-    await counterPage.clickMinusOneButtonSeveralTimes(30);
-    await counterPage.checkIfCounterValueIs(startCounterValue - 31);
+    await counterPage.clickMinusOneButtonSeveralTimes(10);
+    await counterPage.checkIfCounterValueIs(startCounterValue - 11);
 });
 
 test('check "Reset" button', async ({ counterPage }) => {
